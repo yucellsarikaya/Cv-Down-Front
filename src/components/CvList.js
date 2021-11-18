@@ -17,6 +17,7 @@ export default function CvList(props) {
 
     const next = () => {
         history.push(`/home/${id}`)
+        console.log("merhaba")
     } 
 
     const toggleModal = (formId) => {
