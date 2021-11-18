@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+
+.container {
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 13px;
+  margin: 3px 0 13px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 16px;
+}
+
+/* Set a style for the submit button */
+
+.registerbtn {
+  background-color: #0275d8;
+  color: white;
+  padding: 6px 14px;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+.label {
+  color: white;
+  padding: 8px;
+  font-family: Arial;
+  border-radius: 20%;
+}
+
+.listUl {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listLiUl {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+}
+
+.success {
+  background-color: #04AA6D;
+}
+
+.homePage {
+  height: auto;
+  width: 350px;
+}
+
+.divSize{
+  padding-right: 25%;
+  padding-left: 25%;
+  padding-top: 10px; 
+}
+
