@@ -9,6 +9,7 @@ import { Button } from 'react-bootstrap';
 import alertify from "alertifyjs"
 
 export default function CvList(props) {
+    const [deneme, setDeneme] = useState(["Fatih Delice", "İşsiz", "0511 111 11 11", "delicex58@gmail.com", "Sivas", "Ornek yazılımcı", "Yok"])
     const [id, setId] = useState(props.match.params.id)
     const [cvData, setCvData] = useState([])
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function CvList(props) {
 
     const next = () => {
         history.push(`/home/${id}`)
-    } 
+    }
 
     const toggleModal = (formId) => {
         setIsOpen(!modalIsOpen);
@@ -38,8 +39,8 @@ export default function CvList(props) {
 
     return (
         <div className="container">
-             <Button variant="warning" onClick={() => home()}>Anasayfa</Button>
-            {
+            <Button variant="warning" onClick={() => home()}>Anasayfa</Button>
+            {/* {
                 cvData.filter(formLists => formLists.person_id == id).map((key, index) => (
                     <div class="divSize">
                         <div className="card-header">
@@ -55,7 +56,46 @@ export default function CvList(props) {
                         </div>
                     </div>
                 ))
-            }
+            } */}
+            <div class="divSize">
+                <div className="card-header">
+                    <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">{deneme[0]}</h5>
+                            <li className="card-text">{deneme[0]}</li>
+                            <li className="card-text">{deneme[0]}</li>
+                            <a className="btn btn-primary" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divSize">
+                <div className="card-header">
+                    <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">{deneme[0]}</h5>
+                            <li className="card-text">{deneme[0]}</li>
+                            <li className="card-text">{deneme[0]}</li>
+                            <a className="btn btn-primary" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divSize">
+                <div className="card-header">
+                    <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">{deneme[0]}</h5>
+                            <li className="card-text">{deneme[0]}</li>
+                            <li className="card-text">{deneme[0]}</li>
+                            <a className="btn btn-primary" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Modal isOpen={modalIsOpen}
                 onRequestClose={toggleModal}
                 className="about-modal"
