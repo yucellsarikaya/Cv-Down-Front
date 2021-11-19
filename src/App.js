@@ -9,7 +9,7 @@ import Register from './components/Register'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">      
       <Switch>
         <Route exact path="/" render={props => (<Login />)} />
         <Route exact path="/home/:id" render={props => (<Home {...props} />)} />
