@@ -19,7 +19,7 @@ export default function Register() {
     const save = () => {
         if (pass === repeatPass) {
             let person = { name: name, surname: surname, mail: mail, pass: pass }
-            personService.register(person).then(res => (alertify.success("Kayıt Başarılı", 2),  history.push("/"))).catch(err => alertify.error("Kayıt Başarısız", 2), history.push("/register"))
+            personService.register(person).then(res => (alertify.success("Kayıt Başarılı", 2), history.push("/"))).catch(err => alertify.error("Kayıt Başarısız", 2), history.push("/register"))
         } else {
             alertify.error("Şifreler aynı değil , lütfen aynı giriniz", 1)
         }
@@ -28,54 +28,48 @@ export default function Register() {
         history.push("/")
     }
     return (
-        <div >
+        <div className="site-card">
             <Form>
-                <div className=" col-md-6 offset-md-3 offset-md-3">
+                <div>
                     <h1>
-                        <GrContract />
-                        Kayıt Ol
+                        Kaydolun ve CV'nizi oluşturun
                     </h1>
-                    <p>Bir hesap oluşturmak için lütfen bu formu doldurun.</p>
                     <hr />
 
-                    <label for="name"><MdPerson size={40} /><b>İsim</b></label>
                     <div>
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="İsim Giriniz"
+                            placeholder="Adın"
                             required
                             onChange={e => setName(e.target.value)}
                         />
                     </div>
 
-                    <label for="surname"><MdPerson size={40} /><b>Soyisim</b></label>
                     <div>
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="Soyisim Giriniz"
+                            placeholder="Soyadın"
                             required
                             onChange={e => setSurname(e.target.value)}
                         />
                     </div>
 
-                    <label for="email"><MdEmail size={40} /><b>Mail</b></label>
                     <div>
                         <input
                             type="email"
                             className="form-control"
-                            placeholder="Mail Giriniz"
+                            placeholder="E-posta adresin"
                             required
                             onChange={e => setMail(e.target.value)}
                         />
                     </div>
 
-                    <br /><label for="psw"><RiLockPasswordLine size={40} /><b>Şifre</b></label>
                     <div>
                         <input
                             type="password"
-                            placeholder="Şifre giriniz"
+                            placeholder="Yeni şifre"
                             name="psw"
                             id="psw"
                             required
@@ -83,11 +77,10 @@ export default function Register() {
                         />
                     </div>
 
-                    <label for="psw-repeat"><RiLockPasswordLine size={40} /><b>Şifre Tekrar</b></label>
                     <div>
                         <input
                             type="password"
-                            placeholder="Şifre Tekrar Giriniz"
+                            placeholder="Şifre tekrar giriniz"
                             name="psw-repeat"
                             id="psw-repeat"
                             required
@@ -96,10 +89,11 @@ export default function Register() {
                     </div>
                 </div>
             </Form>
-            <div className=" col-md-6 offset-md-3 offset-md-3">
-                <button class="registerbtn" onClick={() => save()}><GrContract />Kayıt ol</button>
+            <div>
+                <button class="register-btn" onClick={() => save()}>Kaydol</button>
+                <hr />
                 <div class="container signin">
-                    <p>Zaten hesabınız var mı? <a onClick={() => login()} className="btn btn-success "><BiLogIn />Giriş yap</a></p>
+                    <p>Zaten bir hesabınız var mı? <a onClick={() => login()} className="btn btn-success ">Giriş yap</a></p>
                 </div>
             </div>
         </div>

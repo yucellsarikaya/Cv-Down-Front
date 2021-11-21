@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
+  
 }
 
 * {
@@ -16,7 +17,7 @@ body {
 
 /* Full-width input fields */
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 13px;
   margin: 3px 0 13px 0;
@@ -25,7 +26,7 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -84,28 +85,6 @@ a {
   border-radius: 20%;
 }
 
-.listUl {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.listLiUl {
-  border: 1px solid #ddd;
-  margin-top: -1px;
-  /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-}
-
-.success {
-  background-color: #04AA6D;
-}
-
-.homePage {
-  height: auto;
-  width: 350px;
-}
 
 .divSize{
   padding-right: 25%;

@@ -23,7 +23,7 @@ export default function Home(props) {
     }
 
     return (
-        <div>
+        <div className="site-card">
             <Container fluid>
                 <div class="homePage">
                     <h3>Hoşgeldin Yücel</h3>

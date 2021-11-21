@@ -32,42 +32,36 @@ export default function Login() {
     }
 
     return (
-        <div>
-            <div className="container">
-                <div className="card col-md-6 offset-md-3 offset-md-3">
-                    <h1>
-                        <FiLogIn />
-                        Giriş Yap
-                    </h1>
-                    <div className="card-body">
-                        <form>
-                            <div className="form-group">
-                                <label for="email"><MdEmail size={40} /><b>Mail</b></label>
-                                <input
-                                    type="email"
-                                    placeholder="E-posta Adresinizi Giriniz"
-                                    className="form-control"
-                                    onChange={e => setMail(e.target.value)}
-                                    value={mail}
-                                />
-                            </div>
-                            <br></br>
-                            <div className="form-group">
-                                <label for="psw"><RiLockPasswordLine size={40} /><b>Şifre</b></label>
-                                <input
-                                    placeholder="Şifrenizi Giriniz"
-                                    className="form-control"
-                                    type="Password"
-                                    onChange={e => setPass(e.target.value)}
-                                    value={pass}
-                                />
-                            </div>
-                            <br />
-                        </form>
-                        <button className="btn btn-info float-lg-end" onClick={() => register()}><GrContract />Kayıt Ol</button>
-                        <button className="btn btn-success " onClick={() => login()}><FiLogIn />Giriş Yap</button>
+        <div className="site-card">
+            <h1>
+                Lütfen Giriş Yapın
+            </h1>
+            <hr />
+            <div className="">
+                <form>
+                    <div className="form-group">
+                        <input
+                            type="email"
+                            placeholder="E-posta Adresinizi Giriniz"
+                            className="form-control"
+                            onChange={e => setMail(e.target.value)}
+                            value={mail}
+                        />
                     </div>
-                </div>
+                    <br></br>
+                    <div className="form-group">
+                        <input
+                            placeholder="Şifrenizi Giriniz"
+                            className="form-control"
+                            type="Password"
+                            onChange={e => setPass(e.target.value)}
+                            value={pass}
+                        />
+                    </div>
+                    <br />
+                </form>
+                <button className="login-btn" onClick={() => login()}>Giriş Yap</button>
+                <button className="register-btn" onClick={() => register()}>Kaydol</button>
             </div>
         </div>
     )
