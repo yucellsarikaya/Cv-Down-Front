@@ -25,7 +25,7 @@ export default function Register() {
         }
     }
     const login = () => {
-        history.push("/")
+        history.push("/login")
     }
     return (
         <div className="site-card">
@@ -92,7 +92,7 @@ export default function Register() {
             <div>
                 <button class="register-btn" onClick={() => save()}>Kaydol</button>
                 <hr />
-                <div class="container signin">
+                <div class="register-button-frame">
                     <p>Zaten bir hesabınız var mı? <a onClick={() => login()} className="btn btn-success ">Giriş yap</a></p>
                 </div>
             </div>

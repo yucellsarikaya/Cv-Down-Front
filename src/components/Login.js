@@ -34,8 +34,9 @@ export default function Login() {
     return (
         <div className="site-card">
             <h1>
-                Lütfen Giriş Yapın
+                Giriş Yap
             </h1>
+            <p>Giriş yapmak için e-posta adresinizi ve şifrenizi girin</p>
             <hr />
             <div className="">
                 <form>
@@ -48,7 +49,7 @@ export default function Login() {
                             value={mail}
                         />
                     </div>
-                    <br></br>
+                    <br />
                     <div className="form-group">
                         <input
                             placeholder="Şifrenizi Giriniz"
@@ -58,8 +59,8 @@ export default function Login() {
                             value={pass}
                         />
                     </div>
-                    <br />
                 </form>
+                <hr />
                 <button className="login-btn" onClick={() => login()}>Giriş Yap</button>
                 <button className="register-btn" onClick={() => register()}>Kaydol</button>
             </div>
