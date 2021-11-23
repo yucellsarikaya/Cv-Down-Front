@@ -35,57 +35,52 @@ export default function PersonUpdate(props) {
 
 
     return (
-        <div>
+        <div  className="site-card">
             <Form>
-                <div className=" col-md-6 offset-md-3 offset-md-3">
+                <div>
                     <h1>
-                        <GrContract />
                         Bilgileri Güncelle
                     </h1>
-                    <p>Bilgileri güncellemek için lütfen bu formu doldurun.</p>
+                    <p>Bilgilerinizi güncellemek için lütfen bu formu doldurun.</p>
                     <hr />
 
-                    <label for="name"><MdPerson size={40} /><b>İsim</b></label>
                     <div>
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="İsim Giriniz"
+                            placeholder="Adın"
                             required
                             value={name}
                             onChange={e => setName(e.target.value)}
                         />
                     </div>
 
-                    <label for="surname"><MdPerson size={40} /><b>Soyisim</b></label>
                     <div>
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="Soyisim Giriniz"
+                            placeholder="Soyadın"
                             required
                             value={surname}
                             onChange={e => setSurname(e.target.value)}
                         />
                     </div>
 
-                    <label for="email"><MdEmail size={40} /><b>Mail</b></label>
                     <div>
                         <input
                             type="email"
                             className="form-control"
-                            placeholder="Mail Giriniz"
+                            placeholder="E-posta adresin"
                             required
                             value={mail}
                             onChange={e => setMail(e.target.value)}
                         />
                     </div>
 
-                    <br /><label for="psw"><RiLockPasswordLine size={40} /><b>Şifre</b></label>
                     <div>
                         <input
                             type="password"
-                            placeholder="Şifre giriniz"
+                            placeholder="Yeni şifre"
                             name="psw"
                             id="psw"
                             required
@@ -93,11 +88,10 @@ export default function PersonUpdate(props) {
                         />
                     </div>
 
-                    <label for="psw-repeat"><RiLockPasswordLine size={40} /><b>Şifre Tekrar</b></label>
                     <div>
                         <input
                             type="password"
-                            placeholder="Şifre Tekrar Giriniz"
+                            placeholder="Yeni şifrenizi tekrar giriniz"
                             name="psw-repeat"
                             id="psw-repeat"
                             required
@@ -107,7 +101,7 @@ export default function PersonUpdate(props) {
                 </div>
             </Form>
             <div className=" col-md-6 offset-md-3 offset-md-3">
-                <button className="registerbtn" onClick={() => save()}><GrContract />Bilgileri Güncelle</button>
+                <button className="register-btn" onClick={() => save()}>Bilgileri Güncelle</button>
             </div>
         </div>
     )
