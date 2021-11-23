@@ -106,4 +106,4 @@ export default function CvList(props) {
         </div>
     )
 }
-{/* <li class="list-group-item">Özgeçmiş {index+1}</li> */ }
+{/* <li className ="list-group-item">Özgeçmiş {index+1}</li> */ }
