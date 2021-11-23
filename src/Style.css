@@ -204,3 +204,34 @@ a:hover{
     float: right;    
     font-size: 13px;    
   }
+  .page-container{
+    width: 100%; 
+    height: auto;
+    padding-top: 100px;
+    padding-left: 17%;
+    padding-right: 10%;
+  }
+  .page-container h1{
+    color: rgba(247, 247, 247, 0.8);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: -50px;
+  }
+  .page-card{
+    width: 30%;
+    height: 350px;
+    justify-content: center;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-right: 25px;
+    background-color:rgba(247, 247, 247, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+    float: left;
+    text-align: center;
+  }
+  .page-icons{
+    width: 110px;
+    height: 110px;
+  }
