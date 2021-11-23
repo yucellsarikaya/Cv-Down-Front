@@ -8,6 +8,7 @@ import Login from './components/Login';
 import PersonUpdate from './components/PersonUpdate';
 import Register from './components/Register';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/cvForm/:id" render={props => (<Cv {...props} />)} />
         <Route exact path="/cvFormDetail/:id/:personId" render={props => (<CvDetail {...props}/>)} />        
       </Switch>
+      <Footer />
     </div>
   );
 }

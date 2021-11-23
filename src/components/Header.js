@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-export default function Page() {
+export default function Header() {
     let history = useHistory();
     const login = () => {
         history.push(`/login`)
