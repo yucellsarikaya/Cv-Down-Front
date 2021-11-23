@@ -25,7 +25,7 @@ export default function Home(props) {
     return (
         <div className="home-card">
             <Container fluid>
-                <div className="homePage">
+                <div className="home-page">
                     <h3>Hoşgeldin Yücel</h3>
                     <p>Profesyonel CV'ni buradan oluşturabilirsin</p>
                     <ul className="listUl listLi">
