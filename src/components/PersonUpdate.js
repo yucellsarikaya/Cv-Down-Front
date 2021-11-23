@@ -107,7 +107,7 @@ export default function PersonUpdate(props) {
                 </div>
             </Form>
             <div className=" col-md-6 offset-md-3 offset-md-3">
-                <button class="registerbtn" onClick={() => save()}><GrContract />Bilgileri Güncelle</button>
+                <button className="registerbtn" onClick={() => save()}><GrContract />Bilgileri Güncelle</button>
             </div>
         </div>
     )

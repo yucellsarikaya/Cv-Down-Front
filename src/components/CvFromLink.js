@@ -31,7 +31,7 @@ export default function CvFromLink(props) {
     return (
         <div>
             <div className="row">
-                <div class="col">
+                <div className="col">
                     <input
                         placeholder="Bağlantılarınızı Giriniz"
                         type="url"
@@ -40,17 +40,17 @@ export default function CvFromLink(props) {
                         onChange={e => setLink(e.target.value)}
                     />
                 </div>
-                <div class="col-md-auto " >
+                <div className="col-md-auto " >
                     <AiFillPlusCircle size={50} onClick={() => add()} />
                 </div>
             </div>
             <Container>
-                <ul class="list-group">
+                <ul className="list-group">
                     {
                         data.filter(form => form.cvform_id == id).map((key) => (
-                            <li className="list-group-item list-group-item-dark"><div class="row">
-                                <div class="col-md-11"><a href={key.link} target="_blank">{key.link}</a></div>
-                                <div class="col-md-1 text-right"><AiTwotoneDelete size={20} onClick={() => del(key.id)}/></div>
+                            <li className="list-group-item list-group-item-dark"><div className="row">
+                                <div className="col-md-11"><a href={key.link} target="_blank">{key.link}</a></div>
+                                <div className="col-md-1 text-right"><AiTwotoneDelete size={20} onClick={() => del(key.id)}/></div>
                             </div></li>
                         ))
                     }

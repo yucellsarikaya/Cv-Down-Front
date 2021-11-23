@@ -90,9 +90,9 @@ export default function Register() {
                 </div>
             </Form>
             <div>
-                <button class="register-btn" onClick={() => save()}>Kaydol</button>
+                <button className="register-btn" onClick={() => save()}>Kaydol</button>
                 <hr />
-                <div class="register-button-frame">
+                <div className="register-button-frame">
                     <p>Zaten bir hesabınız var mı? <a onClick={() => login()} className="btn btn-success ">Giriş yap</a></p>
                 </div>
             </div>

@@ -30,7 +30,7 @@ export default function FormDetail(props) {
             <p>Ehliyet {props.idForm.driving_license}</p>
             <hr />
             <h3><b>Eğitim Bilgileri</b></h3>
-            <ul class="list-group">
+            <ul className="list-group">
                 {
                     dataEgitim.filter(form => form.cvform_id == props.idForm.id).map((key) => (
                         <li>{key.educational_background}</li>
@@ -39,7 +39,7 @@ export default function FormDetail(props) {
             </ul>
             <hr />
             <h3><b>İlgi Alanları</b></h3>
-            <ul class="list-group">
+            <ul className="list-group">
                 {
                     dataIilgi.filter(form => form.cvform_id == props.idForm.id).map((key) => (
                         <li>{key.areas_of_interest}</li>
@@ -48,7 +48,7 @@ export default function FormDetail(props) {
             </ul>
             <hr />
             <h3><b>Sertifikaları</b></h3>
-            <ul class="list-group">
+            <ul className="list-group">
                 {
                     dataSertifika.filter(form => form.cvform_id == props.idForm.id).map((key) => (
                         <li>{key.certificate}</li>
@@ -57,16 +57,16 @@ export default function FormDetail(props) {
             </ul>
             <hr />
             <h3><b>Bağlantı Linkleri</b></h3>
-            <ul class="list-group">
+            <ul className="list-group">
                 {
                     dataLink.filter(form => form.cvform_id == props.idForm.id).map((key) => (
-                        <li><div class="col-md-11"><a href={key.link} target="_blank">{key.link}</a></div></li>
+                        <li><div className="col-md-11"><a href={key.link} target="_blank">{key.link}</a></div></li>
                     ))
                 }
             </ul>
             <hr />
             <h3><b>Yetenekleri</b></h3>
-            <ul class="list-group">
+            <ul className="list-group">
                 {
                     dataSkil.filter(form => form.cvform_id == props.idForm.id).map((key) => (
                         <li>{key.skills}</li>

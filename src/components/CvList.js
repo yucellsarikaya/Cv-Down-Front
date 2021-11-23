@@ -42,7 +42,7 @@ export default function CvList(props) {
             <Button variant="warning" onClick={() => home()}>Anasayfa</Button>
             {/* {
                 cvData.filter(formLists => formLists.person_id == id).map((key, index) => (
-                    <div class="divSize">
+                    <div className="divSize">
                         <div className="card-header">
                         <Button size="sm" className="btn btn-danger" onClick={() => cfFormDel(key.id)}><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
                             <div className="card">
@@ -57,7 +57,7 @@ export default function CvList(props) {
                     </div>
                 ))
             } */}
-            <div class="divSize">
+            <div className="divSize">
                 <div className="card-header">
                     <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
                     <div className="card">
@@ -70,7 +70,7 @@ export default function CvList(props) {
                     </div>
                 </div>
             </div>
-            <div class="divSize">
+            <div className="divSize">
                 <div className="card-header">
                     <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
                     <div className="card">
@@ -83,7 +83,7 @@ export default function CvList(props) {
                     </div>
                 </div>
             </div>
-            <div class="divSize">
+            <div className="divSize">
                 <div className="card-header">
                     <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
                     <div className="card">
