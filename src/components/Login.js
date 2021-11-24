@@ -32,37 +32,39 @@ export default function Login() {
     }
 
     return (
-        <div className="site-card">
-            <h1>
-                Giriş Yap
-            </h1>
-            <p>Giriş yapmak için e-posta adresinizi ve şifrenizi girin</p>
-            <hr />
-            <div className="">
-                <form>
-                    <div className="form-group">
-                        <input
-                            type="email"
-                            placeholder="E-posta Adresinizi Giriniz"
-                            className="form-control"
-                            onChange={e => setMail(e.target.value)}
-                            value={mail}
-                        />
-                    </div>
-                    <br />
-                    <div className="form-group">
-                        <input
-                            placeholder="Şifrenizi Giriniz"
-                            className="form-control"
-                            type="Password"
-                            onChange={e => setPass(e.target.value)}
-                            value={pass}
-                        />
-                    </div>
-                </form>
+        <div>
+            <div className="site-card">
+                <h1>
+                    Giriş Yap
+                </h1>
+                <p>Giriş yapmak için e-posta adresinizi ve şifrenizi girin</p>
                 <hr />
-                <button className="login-btn" onClick={() => login()}>Giriş Yap</button>
-                <button className="register-btn" onClick={() => register()}>Kaydol</button>
+                <div className="">
+                    <form>
+                        <div className="form-group">
+                            <input
+                                type="email"
+                                placeholder="E-posta Adresinizi Giriniz"
+                                className="form-control"
+                                onChange={e => setMail(e.target.value)}
+                                value={mail}
+                            />
+                        </div>
+                        <br />
+                        <div className="form-group">
+                            <input
+                                placeholder="Şifrenizi Giriniz"
+                                className="form-control"
+                                type="Password"
+                                onChange={e => setPass(e.target.value)}
+                                value={pass}
+                            />
+                        </div>
+                    </form>
+                    <hr />
+                    <button className="login-btn" onClick={() => login()}>Giriş Yap</button>
+                    <button className="register-btn" onClick={() => register()}>Kaydol</button>
+                </div>
             </div>
         </div>
     )

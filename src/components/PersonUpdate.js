@@ -35,73 +35,75 @@ export default function PersonUpdate(props) {
 
 
     return (
-        <div  className="site-card">
-            <Form>
-                <div>
-                    <h1>
-                        Bilgileri Güncelle
-                    </h1>
-                    <p>Bilgilerinizi güncellemek için lütfen bu formu doldurun.</p>
-                    <hr />
-
+        <div>
+            <div  className="site-card">
+                <Form>
                     <div>
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Adın"
-                            required
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                        />
-                    </div>
+                        <h1>
+                            Bilgileri Güncelle
+                        </h1>
+                        <p>Bilgilerinizi güncellemek için lütfen bu formu doldurun.</p>
+                        <hr />
 
-                    <div>
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Soyadın"
-                            required
-                            value={surname}
-                            onChange={e => setSurname(e.target.value)}
-                        />
-                    </div>
+                        <div>
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Adın"
+                                required
+                                value={name}
+                                onChange={e => setName(e.target.value)}
+                            />
+                        </div>
 
-                    <div>
-                        <input
-                            type="email"
-                            className="form-control"
-                            placeholder="E-posta adresin"
-                            required
-                            value={mail}
-                            onChange={e => setMail(e.target.value)}
-                        />
-                    </div>
+                        <div>
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Soyadın"
+                                required
+                                value={surname}
+                                onChange={e => setSurname(e.target.value)}
+                            />
+                        </div>
 
-                    <div>
-                        <input
-                            type="password"
-                            placeholder="Yeni şifre"
-                            name="psw"
-                            id="psw"
-                            required
-                            onChange={e => setPass(e.target.value)}
-                        />
-                    </div>
+                        <div>
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="E-posta adresin"
+                                required
+                                value={mail}
+                                onChange={e => setMail(e.target.value)}
+                            />
+                        </div>
 
-                    <div>
-                        <input
-                            type="password"
-                            placeholder="Yeni şifrenizi tekrar giriniz"
-                            name="psw-repeat"
-                            id="psw-repeat"
-                            required
-                            onChange={e => setRepeatPass(e.target.value)}
-                        />
+                        <div>
+                            <input
+                                type="password"
+                                placeholder="Yeni şifre"
+                                name="psw"
+                                id="psw"
+                                required
+                                onChange={e => setPass(e.target.value)}
+                            />
+                        </div>
+
+                        <div>
+                            <input
+                                type="password"
+                                placeholder="Yeni şifrenizi tekrar giriniz"
+                                name="psw-repeat"
+                                id="psw-repeat"
+                                required
+                                onChange={e => setRepeatPass(e.target.value)}
+                            />
+                        </div>
                     </div>
+                </Form>
+                <div className=" col-md-6 offset-md-3 offset-md-3">
+                    <button className="register-btn" onClick={() => save()}>Bilgileri Güncelle</button>
                 </div>
-            </Form>
-            <div className=" col-md-6 offset-md-3 offset-md-3">
-                <button className="register-btn" onClick={() => save()}>Bilgileri Güncelle</button>
             </div>
         </div>
     )
