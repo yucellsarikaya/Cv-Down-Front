@@ -41,7 +41,7 @@ function CvForm(props) {
     }
 
     return (
-        <div>
+        <div className="site-card">
             <Form>
                 <input
                     type="text"

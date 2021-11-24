@@ -38,7 +38,7 @@ export default function CvList(props) {
     })
 
     return (
-        <div className="container">
+        <div className="site-card">
             <Button variant="warning" onClick={() => home()}>Anasayfa</Button>
             {/* {
                 cvData.filter(formLists => formLists.person_id == id).map((key, index) => (
