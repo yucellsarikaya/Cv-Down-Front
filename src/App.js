@@ -9,6 +9,7 @@ import PersonUpdate from './components/PersonUpdate';
 import Register from './components/Register';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SelectCvTemplate from './components/SelectCvTemplate';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <Route exact path="/register" render={props => (<Register />)} />
         <Route exact path="/cvList/:id" render={props => (<CvList {...props} />)} />
         <Route exact path="/cvForm/:id" render={props => (<Cv {...props} />)} />
-        <Route exact path="/cvFormDetail/:id/:personId" render={props => (<CvDetail {...props}/>)} />        
+        <Route exact path="/cvFormDetail/:id/:personId" render={props => (<CvDetail {...props}/>)} />    
+        <Route exact path="/templates" render={props => (<SelectCvTemplate {...props}/>)} />    
       </Switch>
       <Footer />
     </div>

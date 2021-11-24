@@ -35,7 +35,7 @@ export default function CvDetail(props) {
                 <h1>
                     CV Bilgilerinizi Giriniz
                 </h1>
-                <p>Kişisel bilgilerinizi girip sonraki adıma geçebilirsiniz.</p>
+                <p>Deneyim bilgilerinizi girip sonraki adıma geçebilirsiniz.</p>
                 <hr />
                 <div className="cv-experience">
                     <CvFormEducation cvId={id} />
@@ -43,6 +43,7 @@ export default function CvDetail(props) {
                     <CvFormCertificate cvId={id} />
                     <CvFromLink cvId={id} />
                     <CvFormSkils cvId={id} />
+                    <hr />
                     <div className="next-cv">
                         <Button variant="primary" onClick={() => next()}>Sonraki adım ❱❱</Button>
                     </div>
