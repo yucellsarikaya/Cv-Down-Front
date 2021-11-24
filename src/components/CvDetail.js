@@ -4,7 +4,6 @@ import CvFormCertificate from './CvFormCertificate'
 import CvFormEducation from './CvFormEducation'
 import CvFormSkils from './CvFormSkils'
 import CvFromLink from './CvFromLink'
-import { Navbar, NavbarBrand } from 'reactstrap'
 import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import alertify from "alertifyjs"

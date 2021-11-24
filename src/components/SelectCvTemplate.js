@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button } from 'react-bootstrap';
 
 export default function SelectCvTemplate() {
     return (
@@ -18,6 +19,10 @@ export default function SelectCvTemplate() {
                 <hr />
                 <div className="select-cv-templates">
 
+                </div>
+                <hr />
+                <div className="next-cv">
+                    <Button variant="primary">CV Görüntüle ❱❱</Button>
                 </div>
             </div>
         </div>
