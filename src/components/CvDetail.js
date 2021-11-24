@@ -23,27 +23,32 @@ export default function CvDetail(props) {
     }, [])
 
     return (
-        <div className="site-card">
-            <Navbar color="info" light expand="md">
-                <NavbarBrand href="">Bilgilerinizi Giriniz</NavbarBrand>
-            </Navbar>
-            <br />
-            <div className="col-md-6 offset-md-3 offset-md-3">
-                <Navbar className="blockquote-footer" color="warning" expand="md">Eğitim Bilgilerinizi Giriniz</Navbar>
-                <CvFormEducation cvId={id} />
-                <hr /><hr /><br />
-                <Navbar className="blockquote-footer" color="warning" expand="md">İlgi Alanlarınızı Giriniz</Navbar>
-                <CvFormAreasOfİnterest cvId={id} />
-                <hr /><hr /><br />
-                <Navbar className="blockquote-footer" color="warning" expand="md">Sertifikalarınızı Giriniz</Navbar>
-                <CvFormCertificate cvId={id} />
-                <hr /><hr /><br />
-                <Navbar className="blockquote-footer" color="warning" expand="md">Bağlantılarınızı Giriniz</Navbar>
-                <CvFromLink cvId={id} />
-                <hr /><hr /><br />
-                <Navbar className="blockquote-footer" color="warning" expand="md">Yeteneklerinzi Giriniz</Navbar>
-                <CvFormSkils cvId={id} />
-                <Button variant="primary" onClick={() => next()}>Devam</Button>
+        <div>
+            <div class="container-bar">
+                <ul class="progressbar">
+                    <li class="active">Kişisel</li>
+                    <li class="active">Deneyimler</li>
+                    <li>Şablon</li>
+                </ul>
+            </div>
+            <div className="site-card">
+                <h1>
+                    CV Bilgilerinizi Giriniz
+                </h1>
+                <p>Kişisel bilgilerinizi girip sonraki adıma geçebilirsiniz.</p>
+                <hr />
+                <div className="col-md-6 offset-md-3 offset-md-3">
+                    <CvFormEducation cvId={id} />
+                    <hr /><hr /><br />
+                    <CvFormAreasOfİnterest cvId={id} />
+                    <hr /><hr /><br />
+                    <CvFormCertificate cvId={id} />
+                    <hr /><hr /><br />
+                    <CvFromLink cvId={id} />
+                    <hr /><hr /><br />
+                    <CvFormSkils cvId={id} />
+                    <Button variant="primary" onClick={() => next()}>Devam</Button>
+                </div>
             </div>
         </div>
     )

@@ -41,68 +41,77 @@ function CvForm(props) {
     }
 
     return (
-        <div className="site-card">
-            <h1>
-                CV Bilgilerinizi Giriniz
-            </h1>
-            <p>Kişisel bilgilerinizi girip sonraki adıma geçebilirsiniz.</p>
-            <hr />
-            <Form>
-                <input
-                    type="text"
-                    className="form-control"
-                    placeholder="İsim Soyisim Giriniz"
-                    required
-                    onChange={e => setNameSurname(e.target.value)}
-                />
-                <br />
-                <PhoneInput
-                    placeholder="Telefon Giriniz"
-                    value={phone}
-                    required
-                    onChange={setPhone}
-                    className="phone-input"
-                />
-                <br />
-                <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Mail Giriniz"
-                    required
-                    onChange={e => setMail(e.target.value)}
-                />
-                <br />
-                <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Mesleğinizi Giriniz"
-                    required
-                    onChange={e => setJob(e.target.value)}
-                />
-                <textarea
-                    type="text"
-                    className="form-control"
-                    placeholder="Adresinizi Giriniz"
-                    required
-                    onChange={e => setLocation(e.target.value)}
-                />
-                <br />
-                <textarea
-                    type="text"
-                    className="form-control"
-                    placeholder="Önyazı Giriniz"
-                    required
-                    onChange={e => setCoverLetter(e.target.value)}
-                />
-                <br />
-                <div className="radio-text">
-                    <label type="text">Ehliyet:&nbsp;&nbsp;</label>
-                    <input type="radio" name="gender" onChange={e => setDriving_License("Var")} /> Var&nbsp;&nbsp;
-                    <input type="radio" name="gender" onChange={e => setDriving_License("Yok")} /> Yok
+        <div>
+            <div class="container-bar">
+                <ul class="progressbar">
+                    <li class="active">Kişisel</li>
+                    <li>Deneyimler</li>
+                    <li>Şablon</li>
+                </ul>
+            </div> 
+            <div className="site-card">
+                <h1>
+                    CV Bilgilerinizi Giriniz
+                </h1>
+                <p>Kişisel bilgilerinizi girip sonraki adıma geçebilirsiniz.</p>
+                <hr />
+                <Form>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="İsim Soyisim Giriniz"
+                        required
+                        onChange={e => setNameSurname(e.target.value)}
+                    />
+                    <br />
+                    <PhoneInput
+                        placeholder="Telefon Giriniz"
+                        value={phone}
+                        required
+                        onChange={setPhone}
+                        className="phone-input"
+                    />
+                    <br />
+                    <input
+                        type="email"
+                        className="form-control"
+                        placeholder="Mail Giriniz"
+                        required
+                        onChange={e => setMail(e.target.value)}
+                    />
+                    <br />
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Mesleğinizi Giriniz"
+                        required
+                        onChange={e => setJob(e.target.value)}
+                    />
+                    <textarea
+                        type="text"
+                        className="form-control"
+                        placeholder="Adresinizi Giriniz"
+                        required
+                        onChange={e => setLocation(e.target.value)}
+                    />
+                    <br />
+                    <textarea
+                        type="text"
+                        className="form-control"
+                        placeholder="Önyazı Giriniz"
+                        required
+                        onChange={e => setCoverLetter(e.target.value)}
+                    />
+                    <br />
+                    <div className="radio-text">
+                        <label type="text">Ehliyet:&nbsp;&nbsp;</label>
+                        <input type="radio" name="gender" onChange={e => setDriving_License("Var")} /> Var&nbsp;&nbsp;
+                        <input type="radio" name="gender" onChange={e => setDriving_License("Yok")} /> Yok
+                    </div>
+                </Form>
+                <div  className="next-cv">
+                    <Button onClick={() => next()}>Sonraki adım ❱❱</Button>
                 </div>
-            </Form>
-            <div  className="next-cv">
-                <Button onClick={() => next()}>Sonraki adım ❱❱</Button>
             </div>
         </div>
     )

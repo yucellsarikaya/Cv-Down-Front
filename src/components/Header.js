@@ -17,6 +17,7 @@ export default function Header() {
                 <li className="menu-section"><a onClick={() => register() } className="menu-item">Kaydol</a></li>
                 <li className="menu-section"><a href="https://github.com/yucellsarikaya/Cv-Down-Front" className="menu-item"target="_blank">Github</a></li>
                 <li className="menu-section"><a href="https://discord.gg/t7qgzBRr2C" className="menu-item" target="_blank">Discord</a></li> 
+                <li className="menu-section"><a href="https://www.youtube.com/channel/UCVmNrAcLYZ7RFCLf8dWfvhQ" className="menu-item"target="_blank">Youtube</a></li>
             </ul>
         </div>
     )
