@@ -37,17 +37,15 @@ export default function CvDetail(props) {
                 </h1>
                 <p>Kişisel bilgilerinizi girip sonraki adıma geçebilirsiniz.</p>
                 <hr />
-                <div className="col-md-6 offset-md-3 offset-md-3">
+                <div className="cv-experience">
                     <CvFormEducation cvId={id} />
-                    <hr /><hr /><br />
                     <CvFormAreasOfİnterest cvId={id} />
-                    <hr /><hr /><br />
                     <CvFormCertificate cvId={id} />
-                    <hr /><hr /><br />
                     <CvFromLink cvId={id} />
-                    <hr /><hr /><br />
                     <CvFormSkils cvId={id} />
-                    <Button variant="primary" onClick={() => next()}>Devam</Button>
+                    <div className="next-cv">
+                        <Button variant="primary" onClick={() => next()}>Sonraki adım ❱❱</Button>
+                    </div>
                 </div>
             </div>
         </div>

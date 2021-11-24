@@ -348,3 +348,13 @@ a:hover{
   .progressbar li.active + li:after {
     background-color: rgb(86, 50, 139);
   }
+  .cv-experience{
+    width: 100%;
+  }
+  .cv-experience input{
+    width: 91%;
+  }
+  .experience-icon{
+    margin-left: 20px;
+    margin-bottom: -15px;
+  }

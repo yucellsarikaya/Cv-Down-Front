@@ -24,27 +24,25 @@ export default function CvFormEducation(props) {
 
     return (
         <div>
-            <div className="row">
-                <div className="col">
+            <div>
+                <div>
                     <input
-                        placeholder="Eğitim Bilginizi Giriniz"
+                        placeholder="Eğitim bilgilerinizi ekleyin"
                         type="text"
                         className="form-control"
                         value={edu}
                         onChange={e => setEdu(e.target.value)}
                     />
-                </div>
-                <div className="col-md-auto " >
-                    <AiFillPlusCircle size={50} onClick={() => add()} />
+                    <AiFillPlusCircle className="experience-icon" size={40} onClick={() => add()} />
                 </div>
             </div>
             <Container>
-                <ul className="list-group">
+                <ul>
                     {
                         data.filter(form => form.cvform_id == id).map((key) => (
-                            <li className="list-group-item list-group-item-dark"><div className="row">
-                                <div className="col-md-11">{key.educational_background}</div>
-                                <div className="col-md-1 text-right"><AiTwotoneDelete size={20} onClick={() => del(key.id)}/></div>
+                            <li><div>
+                                <div>{key.educational_background}</div>
+                                <div><AiTwotoneDelete size={20} onClick={() => del(key.id)}/></div>
                             </div></li>
                         ))
                     }
