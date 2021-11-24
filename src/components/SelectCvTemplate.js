@@ -11,19 +11,20 @@ export default function SelectCvTemplate() {
                     <li class="active">Şablon</li>
                 </ul>
             </div>
-            <div className="site-card">
+            <div className="templates-container">
                 <h1>
                     CV şablonunuzu seçiniz
                 </h1>
                 <p>Şablonunuzu seçtikten sonra CV'nizin son halini görüntüleyebilirsiniz.</p>
                 <hr />
                 <div className="select-cv-templates">
-
+                    <ul className="listUl listLi">
+                        <li className="templates-card"><button><img src="https://pngimg.com/uploads/cv/cv_PNG38.png" className="templates-icons"></img></button></li>
+                        <li className="templates-card"><button><img src="https://pngimg.com/uploads/cv/cv_PNG38.png" className="templates-icons"></img></button></li>  
+                        <li className="templates-card"><button><img src="https://pngimg.com/uploads/cv/cv_PNG38.png" className="templates-icons"></img></button></li>
+                    </ul>
                 </div>
-                <hr />
-                <div className="next-cv">
-                    <Button variant="primary">CV Görüntüle ❱❱</Button>
-                </div>
+                <div className="templates-alt"></div>
             </div>
         </div>
     )
