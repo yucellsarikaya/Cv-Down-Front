@@ -23,7 +23,7 @@ export default function CvDetail(props) {
     }, [])
 
     return (
-        <div>
+        <div className="site-card">
             <Navbar color="info" light expand="md">
                 <NavbarBrand href="">Bilgilerinizi Giriniz</NavbarBrand>
             </Navbar>

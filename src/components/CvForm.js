@@ -42,6 +42,11 @@ function CvForm(props) {
 
     return (
         <div className="site-card">
+            <h1>
+                CV Bilgilerinizi Giriniz
+            </h1>
+            <p>Kişisel bilgilerinizi girip sonraki adıma geçebilirsiniz.</p>
+            <hr />
             <Form>
                 <input
                     type="text"
@@ -56,6 +61,7 @@ function CvForm(props) {
                     value={phone}
                     required
                     onChange={setPhone}
+                    className="phone-input"
                 />
                 <br />
                 <input
@@ -89,13 +95,15 @@ function CvForm(props) {
                     onChange={e => setCoverLetter(e.target.value)}
                 />
                 <br />
-                <div>
+                <div className="radio-text">
                     <label type="text">Ehliyet:&nbsp;&nbsp;</label>
                     <input type="radio" name="gender" onChange={e => setDriving_License("Var")} /> Var&nbsp;&nbsp;
                     <input type="radio" name="gender" onChange={e => setDriving_License("Yok")} /> Yok
                 </div>
             </Form>
-            <Button onClick={() => next()}><GrNext />Kayıt et ve İleri</Button>
+            <div  className="next-cv">
+                <Button onClick={() => next()}>Sonraki adım ❱❱</Button>
+            </div>
         </div>
     )
 }
