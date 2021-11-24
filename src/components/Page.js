@@ -7,6 +7,7 @@ export default function Page() {
             <div className="page-container">
                 <h1>3 Adımda Mükemmel Bir CV Oluştur</h1>
 
+
                 <div className="page-card">
                     <div className="card">
                         <div className="card__face card__face--front">
@@ -36,7 +37,7 @@ export default function Page() {
                             </p>
                         </div>
                         <div className="card__face card__face--back">
-                            <img src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" className="page_cart__img" />
+                            <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" className="page_cart__img" />
                         </div>
                     </div>
                 </div>
@@ -53,7 +54,7 @@ export default function Page() {
                             </p>
                         </div>
                         <div className="card__face card__face--back">
-                            <img src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" className="page_cart__img" />
+                            <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" className="page_cart__img" />
                         </div>
                     </div>
                 </div>
