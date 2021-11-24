@@ -403,3 +403,9 @@ a:hover{
   .templates-alt{
     padding: 20%;
   }
+  .page_cart__img {
+    padding-left: 25px;
+    padding-bottom: 10px;
+    height: 300px;
+    width: 300px;
+  }
