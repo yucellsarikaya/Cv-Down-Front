@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import '../PageAnimation.scss'
 
 export default function Page() {
     return (
