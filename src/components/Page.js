@@ -20,7 +20,7 @@ export default function Page() {
                             </p>
                         </div>
                         <div className="card__face card__face--back">
-                            <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" className="page_cart__img" />
+                            <img src="https://r.resimlink.com/oXhzZq.png" className="page_cart__img" />
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ export default function Page() {
                             </p>
                         </div>
                         <div className="card__face card__face--back">
-                            <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" className="page_cart__img" />
+                            <img src="https://r.resimlink.com/oXhzZq.png" className="page_cart__img" />
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ export default function Page() {
                             </p>
                         </div>
                         <div className="card__face card__face--back">
-                            <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" className="page_cart__img" />
+                            <img src="https://r.resimlink.com/oXhzZq.png" className="page_cart__img" />
                         </div>
                     </div>
                 </div>
