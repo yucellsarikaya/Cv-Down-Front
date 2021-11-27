@@ -36,18 +36,16 @@ export default function CvFormCertificate(props) {
                     <AiFillPlusCircle className="experience-icon" size={40} onClick={() => add()} />
                 </div>
             </div>
-            <Container>
-                <ul>
-                    {
-                        data.filter(form => form.cvform_id == id).map((key) => (
-                            <li><div>
-                                <div>{key.certificate}</div>
-                                <div><AiTwotoneDelete size={20}  onClick={() => del(key.id)}/></div>
-                            </div></li>
-                        ))
-                    }
-                </ul>
-            </Container>
+            <ul className="form-link-container">
+                {
+                    data.filter(form => form.cvform_id == id).map((key) => (
+                        <li>
+                            <a>{key.certificate}</a>
+                            <AiTwotoneDelete className="form-link-icon" size={20} onClick={() => del(key.id)} />
+                        </li>
+                    ))
+                }
+            </ul>
         </div>
     )
 }

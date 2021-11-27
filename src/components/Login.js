@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
-import { FiLogIn } from "react-icons/fi";
-import { MdEmail } from "react-icons/md";
-import { RiLockPasswordLine } from "react-icons/ri";
-import { GrContract } from "react-icons/gr";
+import { MainContext, useContext } from "../context"
 import { useHistory } from "react-router-dom";
 import personService from '../services/personService';
 import alertify from "alertifyjs"
 
 export default function Login() {
+    const { setLoginCase, setUserData} = useContext(MainContext)
     const [mail, setMail] = useState("")
     const [pass, setPass] = useState("")
     let history = useHistory();
@@ -15,14 +13,14 @@ export default function Login() {
     const login = () => {
         personService.login(mail, pass).then((res) => {
             let person = res.data;
-            //console.log(person)
             if (person[0] == null) {
                 alertify.error("Giriş Başarısız", 2)
                 setMail("")
                 setPass("")
             } else {
-                //console.log(person[0].id)
                 alertify.success("Giriş Başarılı", 2)
+                setUserData(res.data)
+                setLoginCase(true)
                 history.push(`/home/${person[0].id}`)
             }
         })

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import { AiFillPlusCircle, AiTwotoneDelete } from "react-icons/ai";
+import { FiTrash } from "react-icons/fi";
 import cvFromLinkService from '../services/cvFromLinkService.';
+
 
 // {
 //     "id": 1,
@@ -26,7 +28,7 @@ export default function CvFromLink(props) {
 
     useEffect(() => {
         cvFromLinkService.cvFromLinkList().then(res => { setData(res.data) })
-    }, [])
+    })
 
     return (
         <div>
@@ -42,18 +44,16 @@ export default function CvFromLink(props) {
                     <AiFillPlusCircle className="experience-icon" size={40} onClick={() => add()} />
                 </div>
             </div>
-            <Container>
-                <ul>
-                    {
-                        data.filter(form => form.cvform_id == id).map((key) => (
-                            <li><div>
-                                <div><a href={key.link} target="_blank">{key.link}</a></div>
-                                <div><AiTwotoneDelete size={20} onClick={() => del(key.id)}/></div>
-                            </div></li>
-                        ))
-                    }
-                </ul>
-            </Container>
+            <ul className="form-link-container">
+                {
+                    data.filter(form => form.cvform_id == id).map((key) => (
+                        <li>
+                            <a href={key.link} target="_blank">{key.link}</a>
+                            <FiTrash className="form-link-icon" size={20} onClick={() => del(key.id)}/>
+                        </li>
+                    ))
+                }
+            </ul>
         </div>
     )
 }

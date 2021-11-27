@@ -13,7 +13,7 @@ export default function CvFormEducation(props) {
         cvFormEducationService.cvFormEducationAdd(eduForm).then((res) => (console.log("başarılı"))).catch((res) => (console.log("başarısız")))
         setEdu("")
     }
-    
+
     const del = (id) => {
         cvFormEducationService.cvFormEducationDel(id).then((res) => (console.log("silindi"))).catch((res) => (console.log("silinmedi")))
     }
@@ -36,18 +36,18 @@ export default function CvFormEducation(props) {
                     <AiFillPlusCircle className="experience-icon" size={40} onClick={() => add()} />
                 </div>
             </div>
-            <Container>
-                <ul>
-                    {
-                        data.filter(form => form.cvform_id == id).map((key) => (
-                            <li><div>
-                                <div>{key.educational_background}</div>
-                                <div><AiTwotoneDelete size={20} onClick={() => del(key.id)}/></div>
-                            </div></li>
-                        ))
-                    }
-                </ul>
-            </Container>
+
+            <ul className="form-link-container">
+                {
+                    data.filter(form => form.cvform_id == id).map((key) => (
+                        <li>
+                            <a>{key.educational_background}</a>
+                            <AiTwotoneDelete className="form-link-icon" size={20} onClick={() => del(key.id)} />
+                        </li>
+                    ))
+                }
+            </ul>
+
         </div>
     )
 }

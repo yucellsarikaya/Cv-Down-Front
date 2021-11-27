@@ -9,7 +9,6 @@ import { Button } from 'react-bootstrap';
 import alertify from "alertifyjs"
 
 export default function CvList(props) {
-    const [deneme, setDeneme] = useState(["Fatih Delice", "İşsiz", "0511 111 11 11", "delicex58@gmail.com", "Sivas", "Ornek yazılımcı", "Yok"])
     const [id, setId] = useState(props.match.params.id)
     const [cvData, setCvData] = useState([])
     const [modalIsOpen, setIsOpen] = useState(false);

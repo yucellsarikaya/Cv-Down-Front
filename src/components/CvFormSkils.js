@@ -39,21 +39,21 @@ export default function CvFormSkils(props) {
                         value={skil}
                         onChange={e => setSkil(e.target.value)}
                     />
-                    <AiFillPlusCircle className="experience-icon"size={40} onClick={() => add()} />
+                    <AiFillPlusCircle className="experience-icon" size={40} onClick={() => add()} />
                 </div>
             </div>
-            <Container>
-                <ul>
-                    {
-                        data.filter(form => form.cvform_id == id).map((key) => (
-                            <li><div>
-                                <div><a href={key.link}>{key.skills}</a></div>
-                                <div><AiTwotoneDelete size={20} onClick={() => del(key.id)} /></div>
-                            </div></li>
-                        ))
-                    }
-                </ul>
-            </Container>
+
+            <ul className="form-link-container">
+                {
+                    data.filter(form => form.cvform_id == id).map((key) => (
+                        <li>
+                            <a href={key.link}>{key.skills}</a>
+                            <AiTwotoneDelete className="form-link-icon" size={20} onClick={() => del(key.id)} />
+                        </li>
+                    ))
+                }
+            </ul>
+
         </div>
     )
 }

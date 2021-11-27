@@ -6,6 +6,7 @@ import './Style.css';
 import App from './App';
 import 'alertifyjs/build/css/alertify.min.css';
 import { BrowserRouter } from 'react-router-dom'
+
 ReactDOM.render(
   <BrowserRouter>
     <App />
