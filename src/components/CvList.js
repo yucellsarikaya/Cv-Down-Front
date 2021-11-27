@@ -39,7 +39,7 @@ export default function CvList(props) {
 
     return (
         <div className="site-card">
-            <Button variant="warning" onClick={() => home()}>Anasayfa</Button>
+            <Button variant="warning" className="resume-home-btn" onClick={() => home()}>❰❰❰ Ana Sayfa</Button>
             {/* {
                 cvData.filter(formLists => formLists.person_id == id).map((key, index) => (
                     <div className="divSize">
@@ -57,41 +57,66 @@ export default function CvList(props) {
                     </div>
                 ))
             } */}
-            <div className="divSize">
-                <div className="card-header">
-                    <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
-                    <div className="card">
-                        <div className="card-body">
-                            <h5 className="card-title">{deneme[0]}</h5>
-                            <li className="card-text">{deneme[0]}</li>
-                            <li className="card-text">{deneme[0]}</li>
-                            <a className="btn btn-primary" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+            <div>
+                <div className="resume-card">                    
+                    <div className="resume-on">
+                        <div className="resume-content">
+                            <h5>{deneme[0]}</h5>
+                            <hr />
+                            <li>{deneme[3]}</li>
+                            <li>{deneme[2]}</li>
+                        </div>
+                        <div className="cvlist-btns">
+                            <a className="primary-btn" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+                            <Button className="resume-delete-btn">Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="divSize">
-                <div className="card-header">
-                    <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
-                    <div className="card">
-                        <div className="card-body">
-                            <h5 className="card-title">{deneme[0]}</h5>
-                            <li className="card-text">{deneme[0]}</li>
-                            <li className="card-text">{deneme[0]}</li>
-                            <a className="btn btn-primary" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+            <div>
+                <div className="resume-card">                    
+                    <div className="resume-on">
+                        <div className="resume-content">
+                            <h5>{deneme[0]}</h5>
+                            <hr />
+                            <li>{deneme[3]}</li>
+                            <li>{deneme[2]}</li>
+                        </div>
+                        <div className="cvlist-btns">
+                            <a className="primary-btn" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+                            <Button className="resume-delete-btn">Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="divSize">
-                <div className="card-header">
-                    <Button size="sm" className="btn btn-danger"><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
-                    <div className="card">
-                        <div className="card-body">
-                            <h5 className="card-title">{deneme[0]}</h5>
-                            <li className="card-text">{deneme[0]}</li>
-                            <li className="card-text">{deneme[0]}</li>
-                            <a className="btn btn-primary" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+            <div>
+                <div className="resume-card">                    
+                    <div className="resume-on">
+                        <div className="resume-content">
+                            <h5>{deneme[0]}</h5>
+                            <hr />
+                            <li>{deneme[3]}</li>
+                            <li>{deneme[2]}</li>
+                        </div>
+                        <div className="cvlist-btns">
+                            <a className="primary-btn" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+                            <Button className="resume-delete-btn">Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div className="resume-card">                    
+                    <div className="resume-on">
+                        <div className="resume-content">
+                            <h5>{deneme[0]}</h5>
+                            <hr />
+                            <li>{deneme[3]}</li>
+                            <li>{deneme[2]}</li>
+                        </div>
+                        <div className="cvlist-btns">
+                            <a className="primary-btn" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
+                            <Button className="resume-delete-btn">Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
                         </div>
                     </div>
                 </div>

@@ -408,3 +408,78 @@ a:hover{
     height: 300px;
     width: 300px;
   }
+  .resume-card{
+    padding: 20px;
+    background-color:rgba(247, 247, 247, 0.8);
+    border-radius: 5px;
+    margin-bottom: 25px;
+  }
+  .resume-delete-btn{
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    box-shadow: #212529;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+  .resume-delete-btn:hover{
+    border: none;
+  }
+  .resume-home-btn{
+    border-radius: 3px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border: none;
+    box-shadow: #212529;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .garbage{
+    width: 15px;
+    height: auto;
+    margin-bottom: -3px;
+    margin-left: 5px;
+  }
+  .primary-btn{
+    border-radius: 5px;
+    background-color: rgb(86, 50, 139);
+    color: #f5f6f7;
+    border: 1px solid rgb(86, 50, 139);
+    box-shadow: #212529;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+  }
+  .primary-btn:hover{
+    border: none;
+    color: #f5f6f7;
+  }
+  .cvlist-btns{
+    margin-top: 20px;
+  }
+  .resume-on{
+    padding-left: 10px;
+  }
+  .resume-content{
+    text-decoration: none;
+    list-style-type:none;
+    margin-top: -20px;
+  }
+  .resume-content h5{
+    font-size: 1.2rem;
+    color: rgb(36, 36, 36, 0.8);
+    margin-bottom: -1px;
+  }
+  .resume-content hr{
+    background-color: rgb(36, 36, 36, 0.2);
+  }
+  .resume-content li{
+    color: rgb(36, 36, 36, 0.6);
+  }
