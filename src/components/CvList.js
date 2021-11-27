@@ -39,88 +39,27 @@ export default function CvList(props) {
 
     return (
         <div className="site-card">
-            <Button variant="warning" className="resume-home-btn" onClick={() => home()}>❰❰❰ Ana Sayfa</Button>
-            {/* {
-                cvData.filter(formLists => formLists.person_id == id).map((key, index) => (
-                    <div className="divSize">
-                        <div className="card-header">
-                        <Button size="sm" className="btn btn-danger" onClick={() => cfFormDel(key.id)}><AiTwotoneDelete className="modal-close-btn" />Özgeçmişi Sil</Button>
-                            <div className="card">
-                                <div className="card-body">
+            <div>
+                <Button variant="warning" className="resume-home-btn" onClick={() => home()}>❰❰❰ Ana Sayfa</Button>
+                {
+                    cvData.filter(formLists => formLists.person_id == id).map((key, index) => (
+                        <div className="resume-card">
+                            <div className="resume-on">
+                                <div className="resume-content">
                                     <h5 className="card-title">{key.name_surname}</h5>
                                     <li className="card-text">{key.phone}</li>
                                     <li className="card-text">{key.mail}</li>
-                                    <a className="btn btn-primary" onClick={() => toggleModal(key)}>Özgeçmiş Ayrıntılarını Gör</a>
+                                </div>
+                                <div className="cvlist-btns">
+                                    <a className="primary-btn" onClick={() => toggleModal(key)}>Özgeçmiş Ayrıntılarını Gör</a>
+                                    <Button className="resume-delete-btn" onClick={() => cfFormDel(key.id)}>Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))
-            } */}
-            <div>
-                <div className="resume-card">                    
-                    <div className="resume-on">
-                        <div className="resume-content">
-                            <h5>{deneme[0]}</h5>
-                            <hr />
-                            <li>{deneme[3]}</li>
-                            <li>{deneme[2]}</li>
-                        </div>
-                        <div className="cvlist-btns">
-                            <a className="primary-btn" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
-                            <Button className="resume-delete-btn">Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
-                        </div>
-                    </div>
-                </div>
+                    ))
+                }
             </div>
-            <div>
-                <div className="resume-card">                    
-                    <div className="resume-on">
-                        <div className="resume-content">
-                            <h5>{deneme[0]}</h5>
-                            <hr />
-                            <li>{deneme[3]}</li>
-                            <li>{deneme[2]}</li>
-                        </div>
-                        <div className="cvlist-btns">
-                            <a className="primary-btn" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
-                            <Button className="resume-delete-btn">Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div className="resume-card">                    
-                    <div className="resume-on">
-                        <div className="resume-content">
-                            <h5>{deneme[0]}</h5>
-                            <hr />
-                            <li>{deneme[3]}</li>
-                            <li>{deneme[2]}</li>
-                        </div>
-                        <div className="cvlist-btns">
-                            <a className="primary-btn" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
-                            <Button className="resume-delete-btn">Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div className="resume-card">                    
-                    <div className="resume-on">
-                        <div className="resume-content">
-                            <h5>{deneme[0]}</h5>
-                            <hr />
-                            <li>{deneme[3]}</li>
-                            <li>{deneme[2]}</li>
-                        </div>
-                        <div className="cvlist-btns">
-                            <a className="primary-btn" onClick={() => toggleModal({ deneme })}>Özgeçmiş Ayrıntılarını Gör</a>
-                            <Button className="resume-delete-btn">Özgeçmişi Sil<AiTwotoneDelete className="modal-close-btn garbage" /></Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <Modal isOpen={modalIsOpen}
                 onRequestClose={toggleModal}
                 className="about-modal"
@@ -131,4 +70,3 @@ export default function CvList(props) {
         </div>
     )
 }
-{/* <li className ="list-group-item">Özgeçmiş {index+1}</li> */ }
