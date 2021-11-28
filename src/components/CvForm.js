@@ -3,12 +3,14 @@ import { Form, Button } from 'reactstrap'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { useHistory } from 'react-router-dom';
-import { GrNext } from "react-icons/gr";
 import cvFormService from '../services/cvFormService';
 import personService from '../services/personService';
 import alertify from "alertifyjs"
+import { MainContext, useContext } from "../context"
 
 function CvForm(props) {
+    const { setLoginCase} = useContext(MainContext)
+    const [id, setId] = useState(props.match.params.id)
     const [nameSurname, setNameSurname] = useState()
     const [phone, setPhone] = useState()
     const [job, setJob] = useState()
@@ -18,10 +20,18 @@ function CvForm(props) {
     const [driving_license, setDriving_License] = useState()
     let history = useHistory();
 
+    useEffect(() => {
+        setLoginCase(true)
+    }, [])
+
+    const home = () => {
+        history.push(`/home/${id}`)
+    }
+
     const next = () => {
         if (nameSurname && phone && job && mail && location && cover_letter && driving_license != null) {
             let data = {
-                person_id: props.person,
+                person_id: id,
                 name_surname: nameSurname,
                 job: job,
                 phone: phone,
@@ -32,7 +42,7 @@ function CvForm(props) {
             }
             console.log(data)
             cvFormService.cvformSave(data).
-                then((res) => (personService.getId().then((resData) => history.push(`/cvFormDetail/${resData.data[0].id}/${props.person}`))))
+                then((res) => (personService.getId().then((resData) => history.push(`/cvFormDetail/${resData.data[0].id}/${id}`))))
                 .catch((res) => (alertify.error("Kayıt Başarısız", 2)))
         } else {
             alertify.error("Eksik yerleri giriniz", 2)
@@ -43,6 +53,7 @@ function CvForm(props) {
     return (
         <div>
             <div class="container-bar">
+            <Button variant="warning" className="resume-home-btn" onClick={() => home()}>❰❰❰ Ana Sayfa</Button>
                 <ul class="progressbar">
                     <li class="active">Kişisel</li>
                     <li>Deneyimler</li>

@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import { MainContext, useContext } from "../context"
 import { useHistory } from "react-router-dom";
 import personService from '../services/personService';
 import alertify from "alertifyjs"
 
 export default function Login() {
-    const { setLoginCase, setUserData} = useContext(MainContext)
     const [mail, setMail] = useState("")
     const [pass, setPass] = useState("")
     let history = useHistory();
@@ -19,8 +17,6 @@ export default function Login() {
                 setPass("")
             } else {
                 alertify.success("Giriş Başarılı", 2)
-                setUserData(res.data)
-                setLoginCase(true)
                 history.push(`/home/${person[0].id}`)
             }
         })

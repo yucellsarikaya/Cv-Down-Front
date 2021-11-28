@@ -6,6 +6,8 @@ import personService from '../services/personService';
 import { Form } from 'reactstrap';
 import alertify from "alertifyjs"
 import { useHistory } from 'react-router-dom'
+import { Button } from 'react-bootstrap';
+
 
 export default function PersonUpdate(props) {
     const [id, setId] = useState(props.match.params.id)
@@ -24,6 +26,10 @@ export default function PersonUpdate(props) {
         setMail(data.mail)
     })
 
+    const home = () => {
+        history.push(`/home/${id}`)
+    }
+    
     const save = () => {
         if (pass === repeatPass) {
             let person = { id: id, name: name, surname: surname, mail: mail, pass: pass }
@@ -37,6 +43,8 @@ export default function PersonUpdate(props) {
     return (
         <div>
             <div  className="site-card">
+            <Button variant="warning" className="resume-home-btn" onClick={() => home()}>❰❰❰ Ana Sayfa</Button>
+
                 <Form>
                     <div>
                         <h1>

@@ -7,14 +7,20 @@ import CvFromLink from './CvFromLink'
 import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import alertify from "alertifyjs"
+import { MainContext, useContext } from "../context"
 
 export default function CvDetail(props) {
+    const { setLoginCase} = useContext(MainContext)
     const [id, setId] = useState(props.match.params.id)
     const [personId, setPersonId] = useState(props.match.params.personId)
     let history = useHistory();
 
+    useEffect(() => {
+        setLoginCase(true)
+    }, [])
+
     const next = () => {
-        history.push(`/home/${personId}`)
+        history.push(`/templates/${id}`)
     }
 
     useEffect(() => {
@@ -37,11 +43,11 @@ export default function CvDetail(props) {
                 <p>Deneyim bilgilerinizi girip sonraki adıma geçebilirsiniz.</p>
                 <hr />
                 <div className="cv-experience">
-                    <CvFormEducation cvId={id} />
-                    <CvFormAreasOfİnterest cvId={id} />
-                    <CvFormCertificate cvId={id} />
-                    <CvFromLink cvId={id} />
-                    <CvFormSkils cvId={id} />
+                    <CvFormEducation cvId={personId} />
+                    <CvFormAreasOfİnterest cvId={personId} />
+                    <CvFormCertificate cvId={personId} />
+                    <CvFromLink cvId={personId} />
+                    <CvFormSkils cvId={personId} />
                     <hr />
                     <div className="next-cv">
                         <Button variant="primary" onClick={() => next()}>Sonraki adım ❱❱</Button>

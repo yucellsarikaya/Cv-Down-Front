@@ -7,17 +7,19 @@ import { AiTwotoneDelete } from "react-icons/ai";
 import { useHistory } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import alertify from "alertifyjs"
+import { MainContext, useContext } from "../context"
 
 export default function CvList(props) {
+    const { setLoginCase} = useContext(MainContext)
     const [id, setId] = useState(props.match.params.id)
     const [cvData, setCvData] = useState([])
     const [modalIsOpen, setIsOpen] = useState(false);
     const [formId, setFormId] = useState()
     let history = useHistory();
 
-    const next = () => {
-        history.push(`/home/${id}`)
-    }
+    useEffect(() => {
+        setLoginCase(true)
+    }, [])
 
     const toggleModal = (formId) => {
         setIsOpen(!modalIsOpen);
