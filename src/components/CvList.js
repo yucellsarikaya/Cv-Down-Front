@@ -36,13 +36,13 @@ export default function CvList(props) {
 
     useEffect(() => {
         cvFormService.cvFormList().then((res) => { setCvData(res.data) })
-    })
+    },[])
 
     return (
         <div className="site-card">
             <div>
                 <Button variant="warning" className="resume-home-btn" onClick={() => home()}>❰❰❰ Ana Sayfa</Button>
-                {
+                 {
                     cvData.filter(formLists => formLists.person_id == id).map((key, index) => (
                         <div className="resume-card">
                             <div className="resume-on">
@@ -58,7 +58,8 @@ export default function CvList(props) {
                             </div>
                         </div>
                     ))
-                }
+                } 
+                <a className="primary-btn" onClick={() => toggleModal(5)}>Özgeçmiş Ayrıntılarını Gör</a>
             </div>
 
             <Modal isOpen={modalIsOpen}
