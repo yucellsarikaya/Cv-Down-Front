@@ -26,92 +26,170 @@ export default function FormDetail(props) {
         console.log(dataEgitim)
     }, [])
     return (
-        <div>
-            <h3><b>Kişisel Bilgileri</b></h3>
-            {/* <h5>{props.idForm.name_surname}</h5>
-            <p>{props.idForm.job}</p>
-            <p>{props.idForm.phone}</p>
-            <p>{props.idForm.mail}</p>
-            <p>{props.idForm.location}</p>
-            <p>{props.idForm.cover_letter}</p>
-            <p>Ehliyet {props.idForm.driving_license}</p> */}
-            <h5>{deneme[0]}</h5>
-            <p>{deneme[1]}</p>
-            <p>{deneme[2]}</p>
-            <p>{deneme[3]}</p>
-            <p>{deneme[4]}</p>
-            <p>{deneme[5]}</p>
-            <p>Ehliyet {deneme[6]}</p>
-            <hr />
-            <h3><b>Eğitim Bilgileri</b></h3>
-            <ul className="list-group">
-                {/* {
+        <div id="drag" className="cv instaFade wrap">
+            <div className="mainDetails">
+                <div id="headshot" className="">
+                    <img src="https://avatars2.githubusercontent.com/u/24512843?s=400&v=4" title="Hi, I'm Jenny!" alt="Jennifer Mogan" />
+                </div>
+
+                <div id="name">
+                    <h1 className="quickFade delayTwo">{deneme[0]}</h1>
+                    <h4 className="quickFade delayThree">TR, EN</h4>
+                    <h4 className="quickFade delayThree">Computer Engineer</h4>
+                </div>
+
+                <div id="contactDetails" className="quickFade delayFour">
+                    <ul>
+
+                        <li><a href="//linkedin.com/in/jennifermogan" title="LinkedIn"><i className="fa fa-print" aria-hidden="true"></i></a></li>
+                        <li><a href="//linkedin.com/in/jennifermogan" title="LinkedIn"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+
+                    </ul>
+                </div>
+                <div className="clear"></div>
+            </div>
+
+            <div id="mainArea" className="quickFade delayFive">
+
+                <section>
+                    <article>
+                        <div className="sectionTitle">
+                            <h1>Kişisel Bilgileri</h1>
+                        </div>
+
+                        <div className="sectionContent">
+                            <h5>{deneme[0]}</h5>
+                            <p>{deneme[1]}</p>
+                            <p>{deneme[2]}</p>
+                            <p>{deneme[3]}</p>
+                            <p>{deneme[4]}</p>
+                            <p>{deneme[5]}</p>
+                            <p>Ehliyet {deneme[6]}</p>
+                        </div>
+                    </article>
+                    <div className="clear"></div>
+                </section>
+
+
+                <section>
+                    <div className="sectionTitle">
+                        <h1>Eğitim Bilgileri</h1>
+                    </div>
+
+                    <div className="sectionContent">
+                        <ul classNameName="list-group">
+                            {/* {
                     dataEgitim.filter(form => form.cvform_id == props.idForm.id).map((key) => (
                         <li>{key.educational_background}</li>
                     ))
                 } */}
-                {
-                    deneme1.map((key) => (
-                        <li>{key}</li>
-                    ))
-                }
-            </ul>
-            <hr />
-            <h3><b>İlgi Alanları</b></h3>
-            <ul className="list-group">
-                {/* {
-                    dataIilgi.filter(form => form.cvform_id == props.idForm.id).map((key) => (
-                        <li>{key.areas_of_interest}</li>
-                    ))
-                } */}
-                {
-                    deneme2.map((key) => (
-                        <li>{key}</li>
-                    ))
-                }
-            </ul>
-            <hr />
-            <h3><b>Sertifikaları</b></h3>
-            <ul className="list-group">
-                {/* {
-                    dataSertifika.filter(form => form.cvform_id == props.idForm.id).map((key) => (
-                        <li>{key.certificate}</li>
-                    ))
-                } */}
-                {
-                    deneme3.map((key) => (
-                        <li>{key}</li>
-                    ))
-                }
-            </ul>
-            <hr />
-            <h3><b>Bağlantı Linkleri</b></h3>
-            <ul className="list-group">
-                {/* {
-                    dataLink.filter(form => form.cvform_id == props.idForm.id).map((key) => (
-                        <li><div className="col-md-11"><a href={key.link} target="_blank">{key.link}</a></div></li>
-                    ))
-                } */}
-                {
-                    deneme4.map((key) => (
-                        <li > <a href={key} target="_blank">{key}</a></li>
-                    ))
-                }
-            </ul>
-            <hr />
-            <h3><b>Yetenekleri</b></h3>
-            <ul className="list-group">
-                {/* {
-                    dataSkil.filter(form => form.cvform_id == props.idForm.id).map((key) => (
-                        <li>{key.skills}</li>
-                    ))
-                } */}
-                {
-                    deneme5.map((key) => (
-                        <li>{key}</li>
-                    ))
-                }
-            </ul>
+                            {
+                                deneme1.map((key) => (
+                                    <li>{key}</li>
+                                ))
+                            }
+                        </ul>
+
+                    </div>
+
+
+                    <div className="clear"></div>
+                </section>
+
+
+                <section>
+                    <div className="sectionTitle">
+                        <h1>İlgi Alanları</h1>
+                    </div>
+
+                    <div className="sectionContent">
+                        <ul classNameName="keySkills">
+                            {/* {
+                                dataIilgi.filter(form => form.cvform_id == props.idForm.id).map((key) => (
+                                    <li>{key.areas_of_interest}</li>
+                                ))
+                            } */}
+                            {
+                                deneme2.map((key) => (
+                                    <li>{key}</li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div className="clear"></div>
+                </section>
+
+
+                <section id="Education">
+                    <div className="sectionTitle">
+                        <h1>Sertifikalar</h1>
+                    </div>
+
+                    <div className="sectionContent">
+                        <ul classNameName="list-group">
+                            {/* {
+                                dataSertifika.filter(form => form.cvform_id == props.idForm.id).map((key) => (
+                                    <li>{key.certificate}</li>
+                                ))
+                            } */}
+                            {
+                                deneme3.map((key) => (
+                                    <li>{key}</li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div className="clear"></div>
+                </section>
+
+
+                <section id="Education">
+                    <div className="sectionTitle">
+                        <h1>Bağlantı Linkleri</h1>
+                    </div>
+
+                    <div className="sectionContent">
+
+                        <ul classNameName="list-group">
+                            {/* {
+                                dataLink.filter(form => form.cvform_id == props.idForm.id).map((key) => (
+                                    <li><div classNameName="col-md-11"><a href={key.link} target="_blank">{key.link}</a></div></li>
+                                ))
+                            } */}
+                            {
+                                deneme4.map((key) => (
+                                    <li > <a href={key} target="_blank">{key}</a></li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div className="clear"></div>
+                </section>
+                <section id="Education">
+                    <div className="sectionTitle">
+                        <h1>Yetenekler</h1>
+                    </div>
+
+                    <div className="sectionContent">
+                        <ul classNameName="keySkills">
+                            {/* {
+                                dataSkil.filter(form => form.cvform_id == props.idForm.id).map((key) => (
+                                    <li>{key.skills}</li>
+                                ))
+                            } */}
+                            {
+                                deneme5.map((key) => (
+                                    <li>{key}</li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div className="clear"></div>
+                </section>
+
+
+
+            </div>
         </div>
     )
 }
