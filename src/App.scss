@@ -84,6 +84,7 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
+    list-style-type: none;
   }
 
   article,
@@ -285,12 +286,6 @@
   .keySkills ul li {
     margin-bottom: 3px;
   }
-
-
-
-
-
-
 
   @media all and (min-width: 602px) and (max-width: 800px) {
     #headshot {
